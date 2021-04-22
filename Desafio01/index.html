@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário</title>
+        <link rel="shortcut icon" href="mundohtml.ico" type="image/x-icon">
+        <style>
+            body{
+                background-color: #333;
+            }
+            h1 {
+                text-align: center;
+                color: darkgray;
+            }
+            h2{
+                text-align: center;
+            }
+            .container {
+                background-color: rgb(15, 15, 15);
+                color:#fff;
+                width: 40%;
+                margin: auto;
+                padding: 50px;
+                border: 10px solid rgb(167, 167, 167)
+            }
+            .form-group{
+                padding-bottom: 20px;
+            }
+            .form-group label{
+                display: block;
+                padding-left: 13px;
+            }
+            .form-group input{                
+                padding: 10px;
+	            width: 100%;
+                border-radius: 20px;
+            }
+            .box textarea{          
+                resize: none;
+                padding: 10px;
+                width: 100%; 
+                height: 50px;
+                border-radius: 20px;
+            }
+            .box label {
+                display: block;
+                padding-left: 13px;                
+            }
+            .img {
+                padding-top: 200px;
+                padding-bottom: 0%;
+                padding-left: 30%;
+                padding-right: 0px;
+            }
+            .botton input {
+                background-color: rgb(72, 2, 100);
+                border-radius: 20px;
+                padding: 7px;
+                margin-left: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Envie seu e-mail</h1>
+
+        <div class="container">
+            <!--Para execução desta atividade, foi usado STATIC FORMS para enviar emails.-->
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <!-- type="hidden" faz com que input não seja visível aos usuários -->
+                <input type="hidden" name="accessKey" value="dce18e44-efd1-4535-af16-7adc50fda058">               
+            
+                <div class="form-group">
+                    <label for="inputNome">Seu Name:</label>
+                    <input type="text" name="name" id="inputNome">
+
+                </div>
+                <div class="form-group">
+                    <label for="inputemail">Endereço de Email:</label>
+                    <input type="email" name="email" id="inputemail">
+                  
+                </div>
+                <div class="box">
+                    <label for="textAreaMensagem">Mensagem:</label>
+                    <textarea name="message" id="textAreaMensagem" ></textarea>
+                    
+                </div>
+                <!-- O certo é, após Enviar a página deveria ser recarregada, value direciona para onde vai.-->
+                <input type="hidden" name="redirectTo" value="https://Google.com">
+                <div class="botton">
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
+        <h2>Mais embaixo podemos visualizar o modelo de envio/recebimento</h2>
+        <div class="img">         
+            <img src="staticform.png" alt="Resultado Form">
+        </div>
+    </body>
+</html>
